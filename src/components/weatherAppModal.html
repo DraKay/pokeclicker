@@ -74,5 +74,10 @@
             <img width=30px src="" data-bind="attr: { src: `assets/images/weather/${WeatherType[weatherForecast.weatherType]}.png` }"/>
         </button>
     </td>
+        </td>
+    <td style="height:60px"
+        data-bind="css: { 'weatherForecastPassed': weatherForecast.status() === WeatherForecastStatus.hasPassed }">
+        data-bind="text:WeatherType[weatherForecast.weatherType]"
+    </td>
     <!-- /ko -->
 </script>
